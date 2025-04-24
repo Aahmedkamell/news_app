@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_ui_setup/widgets/categories_list_view.dart';
 import 'package:news_app_ui_setup/widgets/category_card.dart';
 import 'package:news_app_ui_setup/widgets/news_article.dart';
+import 'package:news_app_ui_setup/widgets/news_list_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -34,7 +35,16 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: NewsArticle(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            CategoriesListView(),
+            SizedBox(height: 32,),
+            Expanded(child: NewsListView()),
+          ],
+        ),
+      )
     );
   }
 }
