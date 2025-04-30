@@ -11,40 +11,44 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('News',
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('News',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  )),
+              Text(
+                'Cloud',
                 style: GoogleFonts.poppins(
-                  color: Colors.black,
+                  color: Colors.deepOrange,
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
-                )),
-            Text(
-              'Cloud',
-              style: GoogleFonts.poppins(
-                color: Colors.deepOrange,
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
+                ),
+              )
+            ],
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverToBoxAdapter(child: CategoriesListView()),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 32,
+                ),
               ),
-            )
-          ],
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            CategoriesListView(),
-            SizedBox(height: 32,),
-            Expanded(child: NewsListView()),
-          ],
-        ),
-      )
-    );
+              NewsListView(),
+            ],
+          ),
+        ));
   }
 }
