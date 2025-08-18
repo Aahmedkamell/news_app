@@ -22,7 +22,7 @@ class CategoryCard extends StatelessWidget {
           child: Text(
         category.categoryName,
         style: GoogleFonts.inter(
-          color: Colors.white,
+          color: const Color.fromARGB(255, 255, 255, 255),
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),

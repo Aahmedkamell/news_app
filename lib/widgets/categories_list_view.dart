@@ -5,14 +5,14 @@ import 'package:news_app_ui_setup/widgets/category_card.dart';
 class CategoriesListView extends StatelessWidget {
   CategoriesListView({super.key});
 
-  final List<CategoryModel> categories = const [
-    CategoryModel(image: 'assets/business.avif', categoryName: 'Business'),
+  final List<CategoryModel> categories =  [
+    CategoryModel(image: 'assets/business.jpg', categoryName: 'Business'),
     CategoryModel(
-        image: 'assets/entertainment.avif', categoryName: 'Entertainment'),
-    CategoryModel(image: 'assets/general.avif', categoryName: 'General'),
-    CategoryModel(image: 'assets/health.avif', categoryName: 'Health'),
-    CategoryModel(image: 'assets/science.avif', categoryName: 'Science'),
-    CategoryModel(image: 'assets/sports.avif', categoryName: 'Sports'),
+        image: 'assets/entertainment.jpg', categoryName: 'Entertainment'),
+    CategoryModel(image: 'assets/general.jpg', categoryName: 'General'),
+    CategoryModel(image: 'assets/health.jpg', categoryName: 'Health'),
+    CategoryModel(image: 'assets/science.jpg', categoryName: 'Science'),
+    CategoryModel(image: 'assets/sports.jpg', categoryName: 'Sports'),
   ];
   @override
   Widget build(BuildContext context) {
