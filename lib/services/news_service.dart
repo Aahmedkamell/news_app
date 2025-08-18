@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:news_app_ui_setup/models/article_model.dart';
 
 class NewsService {
   final Dio dio;
