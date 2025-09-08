@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app_ui_setup/models/article_model.dart';
 import 'package:news_app_ui_setup/services/news_service.dart';
 import 'package:news_app_ui_setup/widgets/news_article.dart';
 
@@ -13,9 +14,12 @@ class NewsListView extends StatefulWidget {
 }
 
 class _NewsListViewState extends State<NewsListView> {
+  List<ArticleModel> articles = [];
   @override
-  void initState() {
+  void initState() async{
     super.initState();
+
+   articles= await  NewsService(Dio()).getGeneralNews();
   }
 
 
@@ -24,10 +28,12 @@ class _NewsListViewState extends State<NewsListView> {
   Widget build(BuildContext context) {
     NewsService(Dio()).getGeneralNews;
     return SliverList(
-        delegate: SliverChildBuilderDelegate(childCount: 10, (context, index) {
+        delegate: SliverChildBuilderDelegate(childCount: articles.length, (context, index) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 22),
-        child: NewsArticle(),
+        child: NewsArticle(
+          article: articles[index],
+        ),
       );
     }));
   }

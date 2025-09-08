@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app_ui_setup/models/article_model.dart';
 
 class NewsArticle extends StatelessWidget {
-  const NewsArticle({super.key});
-
+  const NewsArticle({super.key, required this.article});
+final ArticleModel article;
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -15,7 +16,7 @@ class NewsArticle extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: Image.network(
-              'https://vid.alarabiya.net/images/2025/04/19/297c5cf2-50e9-4ea8-afe6-7cbab59963c1/297c5cf2-50e9-4ea8-afe6-7cbab59963c1_16x9_1200x676.JPG',
+              article.image,
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -45,7 +46,7 @@ class NewsArticle extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            'تحديث iOS يثير الارتباك بين مستخدمي آيفون',
+            article.title,
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             style: GoogleFonts.tajawal(
@@ -56,7 +57,7 @@ class NewsArticle extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'تسبب في تلف بعض الأجهزة',
+            article.subTitle??'',
             maxLines: 2,
             style: GoogleFonts.tajawal(
               color: Colors.grey,
