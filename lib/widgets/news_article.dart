@@ -16,7 +16,7 @@ final ArticleModel article;
           ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: Image.network(
-              article.image,
+              article.image??'https://via.placeholder.com/150',
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,

@@ -16,19 +16,22 @@ class NewsListView extends StatefulWidget {
 class _NewsListViewState extends State<NewsListView> {
   List<ArticleModel> articles = [];
   @override
-  void initState() async{
+  void initState()  {
     super.initState();
 
-   articles= await  NewsService(Dio()).getGeneralNews();
+     getGeneralNews();
   }
 
-
+  Future<void> getGeneralNews() async {
+    articles = await NewsService(Dio()).getGeneralNews();
+  }
 
   @override
   Widget build(BuildContext context) {
     NewsService(Dio()).getGeneralNews;
     return SliverList(
-        delegate: SliverChildBuilderDelegate(childCount: articles.length, (context, index) {
+        delegate: SliverChildBuilderDelegate(childCount: articles.length,
+            (context, index) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 22),
         child: NewsArticle(
