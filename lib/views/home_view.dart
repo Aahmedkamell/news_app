@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_ui_setup/widgets/categories_list_view.dart';
-import 'package:news_app_ui_setup/widgets/category_card.dart';
-import 'package:news_app_ui_setup/widgets/news_article.dart';
-import 'package:news_app_ui_setup/widgets/news_list_view.dart';
+import 'package:news_app_ui_setup/widgets/news_list_builder.dart';
+
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+   HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,17 +37,18 @@ class HomeView extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: CustomScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(child: CategoriesListView()),
-              SliverToBoxAdapter(
+               SliverToBoxAdapter(
                 child: SizedBox(
                   height: 32,
                 ),
               ),
-              NewsListView(),
+               NewsListViewBuilder(),
             ],
           ),
         ));
   }
 }
+
