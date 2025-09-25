@@ -1,13 +1,29 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app_ui_setup/models/article_model.dart';
 import 'package:news_app_ui_setup/services/news_service.dart';
 import 'package:news_app_ui_setup/widgets/news_list_view.dart';
 
-class NewsListViewBuilder extends StatelessWidget {
+class NewsListViewBuilder extends StatefulWidget {
+  @override
+  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
+}
+
+class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
+ var futureNews;
+ 
+ @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+     futureNews= NewsService(Dio()).getGeneralNews();
+  }
+ 
+ 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: NewsService(Dio()).getGeneralNews(),
+    return FutureBuilder<List<ArticleModel>>(
+        future: futureNews,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return NewsListView(articles: snapshot.data!);
