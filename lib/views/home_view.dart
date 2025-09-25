@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_ui_setup/widgets/categories_list_view.dart';
 import 'package:news_app_ui_setup/widgets/news_list_builder.dart';
 
-
 class HomeView extends StatelessWidget {
-   HomeView({super.key});
+  HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,15 +39,16 @@ class HomeView extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(child: CategoriesListView()),
-               SliverToBoxAdapter(
+              SliverToBoxAdapter(
                 child: SizedBox(
                   height: 32,
                 ),
               ),
-               NewsListViewBuilder(),
+              NewsListViewBuilder(
+                category: 'general',
+              ),
             ],
           ),
         ));
   }
 }
-

@@ -14,7 +14,7 @@ class NewsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    NewsService(Dio()).getGeneralNews;
+    NewsService(Dio()).getNews;
     return SliverList(
       delegate: SliverChildBuilderDelegate(childCount: articles.length,
           (context, index) {
