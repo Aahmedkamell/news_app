@@ -25,7 +25,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
     return FutureBuilder<List<ArticleModel>>(
         future: futureNews,
         builder: (context, snapshot) {
-          if (snapshot.hasData) {
+          if (snapshot.hasData) {   
             return NewsListView(articles: snapshot.data!);
           } else if (snapshot.hasError) {
             return const SliverToBoxAdapter(
