@@ -35,7 +35,7 @@ lib/
 │── main.dart       # Entry point
 
 📸 Screenshots
-
+  https://github.com/Aahmedkamell/news_app/tree/main/assets/screenshots
 
 🔗 How to Run
 
