@@ -1,16 +1,77 @@
-# news_app
+📱 News App
 
-A new Flutter project.
+A simple News Application built with Flutter & Dart, designed to fetch and display real-time news articles from an external API.
+This project was developed as part of a Flutter course to practice API integration, app architecture, and UI/UX design.
 
-## Getting Started
+🚀 Features
 
-This project is a starting point for a Flutter application.
+Fetch latest news articles using REST API (Dio)
 
-A few resources to get you started if this is your first Flutter project:
+Implemented MVC architecture for clean and maintainable code
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Built custom reusable widgets for consistent design
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Used FutureBuilder and async/await for async programming
+
+Responsive UI/UX for smooth navigation and better user experience
+
+🛠️ Tech Stack
+
+Framework: Flutter
+
+Language: Dart
+
+State Management: FutureBuilder, setState
+
+Networking: Dio (REST API)
+
+Architecture: MVC pattern
+
+📂 Project Structure
+lib/
+│── models/         # Data models (e.g., Article)
+│── views/          # UI screens and widgets
+│── controllers/    # Business logic & API calls
+│── main.dart       # Entry point
+
+📸 Screenshots
+
+
+🔗 How to Run
+
+1- Clone the repository:
+
+git clone https://github.com/Aahmedkamell/news_app.git
+
+
+2- Navigate to the project folder:
+
+cd news_app
+
+
+3- Get dependencies:
+
+flutter pub get
+
+
+4- Run the app:
+
+flutter run
+
+📖 Learning Outcomes
+
+From this project I learned how to:
+
+Integrate APIs using Dio
+
+Apply clean architecture (MVC)
+
+Build responsive UIs with reusable widgets
+
+Handle asynchronous programming with FutureBuilder & async/await
+
+👨‍💻 Author
+
+Ahmed Ashraf Mohammed Kamel
+🔗 LinkedIn
+ | 💻 GitHub
