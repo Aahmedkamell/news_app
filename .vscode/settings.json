@@ -1,5 +1,6 @@
 {
     "cmake.sourceDirectory": "D:/Flutter/Projects/news_app/windows/flutter",
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+    "editor.quickSuggestions": false
 }
