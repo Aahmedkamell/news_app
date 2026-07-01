@@ -12,7 +12,7 @@ class ArticleWebView extends StatelessWidget {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(Uri.parse(article.url ?? 'https://google.com'));
 
-    return Scaffold(
+    return Scaffold( 
       appBar: AppBar(
         title: Text(
           article.title,
