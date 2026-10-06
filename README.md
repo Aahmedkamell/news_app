@@ -1,83 +1,62 @@
+# 📰 News App
 
-# 📱 News App  
+A Flutter news application that fetches and presents articles from a REST API with reusable UI components and asynchronous data handling.
 
-A simple **News Application** built with **Flutter & Dart**, designed to fetch and display real-time news articles from an external API.  
+## ✨ Features
+- 📰 Fetch news articles from a REST API
+- 🌐 API integration using **Dio**
+- 🏗️ MVC-oriented code organization
+- 🧩 Reusable UI components
+- ⏳ Asynchronous loading with `FutureBuilder`
+- 🔄 UI updates with `setState`
+- 🗂️ Category-based news browsing
+- 🌐 Article viewing with WebView
+- 🎨 Custom typography with Google Fonts
+- 📱 Responsive mobile UI
 
-This project was developed as part of a Flutter course to practice **API integration, app architecture, and UI/UX design**.
+## 🛠️ Tech Stack
+- **Flutter & Dart**
+- **Dio**
+- **FutureBuilder / async-await**
+- **setState**
+- **MVC**
+- **Google Fonts**
+- **WebView**
+- **CustomScrollView / SliverList**
 
----
-
-## 🚀 Features  
-
-- 📰 Fetch latest news articles using REST API (**Dio**)  
-- 🏗️ Implemented **MVC architecture** for clean and maintainable code  
-- 🧩 Built custom reusable widgets for consistent UI design  
-- ⏳ Used `FutureBuilder` and `async/await` for asynchronous programming  
-- 📱 Responsive UI/UX for smooth navigation  
-
----
-
-## 🛠️ Tech Stack  
-
-- **Framework:** Flutter  
-- **Language:** Dart  
-- **State Management:** FutureBuilder & setState  
-- **Networking:** Dio (REST API)  
-- **Architecture:** MVC Pattern  
-
----
-
-## 📂 Project Structure  
-
-
-
+## 📁 Project Structure
+```text
 lib/
-│── models/ # Data models (e.g., Article)
-│── views/ # UI screens and widgets
-│── controllers/ # Business logic & API calls
-│── main.dart # Entry point
+├── models/
+├── views/
+├── controllers/
+├── widgets/
+└── main.dart
+```
 
-
----
-
-## 📸 Screenshots  
-
-You can view the app screenshots here:  
-
-🔗 [View Screenshots](https://github.com/Aahmedkamell/news_app/tree/main/assets/screenshots)
-
----
-
-## 🔗 How to Run  
-
-### 1️⃣ Clone the repository  
-
+## 🚀 Getting Started
 ```bash
 git clone https://github.com/Aahmedkamell/news_app.git
-
-2️⃣ Navigate to the project folder
 cd news_app
-
-3️⃣ Get dependencies
 flutter pub get
-
-4️⃣ Run the app
 flutter run
+```
 
-📖 Learning Outcomes
+> If your News API configuration requires a key, add it according to the project's configuration before running the app.
 
-Through this project, I learned how to:
+## 📸 Screenshots
+Screenshots are available in:
+```text
+assets/screenshots/
+```
 
-Integrate APIs using Dio
+## 🎯 Technical Highlights
+- REST API integration with Dio
+- MVC-oriented separation of responsibilities
+- Async data loading and UI states
+- Reusable widgets and category navigation
+- Embedded article browsing with WebView
 
-Apply clean architecture principles (MVC)
-
-Build responsive UI with reusable widgets
-
-Handle asynchronous programming using FutureBuilder & async/await
-
-👨‍💻 Author
-
-Ahmed Ashraf Mohammed Kamel
-
-🔗 LinkedIn
+## 👨‍💻 Author
+**Ahmed Ashraf Mohammed Kamel**  
+Flutter Developer
